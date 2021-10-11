@@ -1,0 +1,84 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* -----------導覽列----------- */
+
+nav {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  background-color: #eac80c;
+}
+
+.title_list {
+  display: flex;
+  margin: right;
+  padding: 25px 10px;
+}
+.title_list a {
+  display: inline-block;
+  text-decoration: none;
+  color: #3a3204;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+/* ---------頁尾--------- */
+
+.footer {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  background-color: #eac80c;
+}
+.foot_logo {
+  height: 100px;
+  margin-left: 5px;
+}
+.foot_logo img {
+  margin-top: 20px;
+  width: 100%;
+}
+.foot_text {
+  margin-left: 40px;
+  margin-top: 5px;
+  padding: 10px;
+  color: #3a3204;
+}
+.foot_text h2 {
+  padding-bottom: 5px;
+}
+.foot_text p {
+  padding: 5px 0px;
+}
+.foot_message {
+  display: flex;
+  margin-left: auto;
+}
+.message_item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  text-align: center;
+}
+.message_item h2 {
+  color: #3a3204;
+}
+.message_item a {
+  padding: 10px 0px;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  color: #3a3204;
+}
+.test {
+  display: flex;
+  width: 300px;
+  height: 300px;
+}
+.test img {
+  width: 100%;
+  height: 100%;
+}

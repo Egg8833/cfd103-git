@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./goodtime.css">
+    <title>Document</title>
+
+    <style>
+
+    /* ------輪播圖---- */
+
+    .slider {
+        width: 1200px;
+        margin: auto;
+    }
+    .slider_pic img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+      /* 咖啡器材清單 */
+        
+      :root {
+            --col-gap:15px;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff7ccd8;
+           
+           
+        }
+        .row {
+            display: flex;
+            margin-left: -15px; ;
+            margin-right: -15px;
+        }
+        [class*="col-"]{
+            padding-left: var(--col-gap); 
+            padding-right: var(--col-gap);
+            box-sizing: border-box;
+        }
+        .col-1{width:calc(100%/ 12 * 1);  }
+        .col-2{width:calc(100%/ 12 * 2);  }
+        .col-3{width:calc(100%/ 12 * 3); }
+        .col-4{width:calc(100%/ 12 * 4); }
+        .col-5{width:calc(100%/ 12 * 5); }
+        .col-6{width:calc(100%/ 12 * 6); }
+        .col-7{width:calc(100%/ 12 * 7); }
+        .col-8{width:calc(100%/ 12 * 8); }
+        .col-9{width:calc(100%/ 12 * 9); }
+        .col-10{width:calc(100%/ 12 * 10); }
+        .col-11{width:calc(100%/ 12 * 11); }
+        .col-12{width:calc(100%/ 12 * 12); } 
+
+      .equipment_item {
+            padding: 10px; 
+            position: relative;
+        }
+        .equipment_item_title{    
+            position: absolute;
+            height: 900px;
+            right:0px;
+            left: 0px; 
+            border-right: indianred 1px solid;
+        }
+        .equipment_item_title h2{
+            text-align: center;
+           
+            color: #3a3204;
+        }
+        .equipment_item_title li,a {
+            text-decoration: none;
+            list-style: none;
+        }
+        .equipment_item_title li{
+            padding: 10px 0px 10px 65px;
+        }
+        .equipment_item_title a {
+            font-size: 20px;
+            color:#3a3204;
+            padding: 0px 5px;
+        }
+        .equipment_item_title a:hover{
+            background-color: indianred;
+        }
+        .equipment_item img {width: 100%;}
+        .equipment_item .text span,p {
+            display: inline-block;
+            padding: 10px 0px;
+        }
+        .equipment_item .text span {
+            line-height: 22px;
+            text-decoration:line-through;
+            color: gray;
+        }
+        .equipment_item .text p {
+            padding-left:30px;}
+       
+        .goshop {
+            height: 30px;
+            padding:0px 5px;
+            
+        }
+        .shop2 {
+            width:90px;
+        }
+        
+
+        
+
+    </style>
+</head>
+
+    <section class="title">
+        <nav>
+            <div class="title_logo">
+                <a href="./01index.html"><img src="./圖片/商標.png" alt="好時光圖片商標"></a>
+            </div>
+
+            <div class="title_list" >
+            <a href="./02brand.html" >關於好時光</a>
+            <a href="./03coffee bean.html">精選咖啡豆</a>
+            <a href="./04equipment.html">咖啡器材</a>
+            <a href="./05school.html">咖啡學院</a>
+            <a href="./06shop.html">聯絡我們</a>
+
+            <!-- -----少兩個可以點集的icon -->
+            </div>
+
+        </nav>
+    </section>
+
+
+    <div class="slider">
+        <div class="slider_pic">
+            <img src="./圖片/咖啡器材.jpg">   
+        </div>
+    </div>
+
+<div class="container">
+    <div class="col-3  ">
+        <div class="equipment_item ">
+            <div class="equipment_item_title">
+            <h2>咖啡器材項目</h2>
+            <li><a href="">磨豆機</a></li>
+            <li><a href="">手沖壺/玻璃壺</a></li>
+            <li><a href="">濾器/濾杯</a></li>
+            <li><a href="">咖啡杯</a></li>
+            <li><a href="">咖啡配件區</a></li>
+        </div>
+        </div>
+    </div>
+    <div class="col-9 ">
+        <div class="row">
+            <div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/磨豆機1.jpg" alt="">
+                    <div class="text">
+                        <h3>OXO智慧錐刀磨豆機</h3>
+                        <span>TWD8500</span> 
+                        <p>優惠 7860</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/ai62.4ur.jpg" alt="">
+                    <div class="text">
+                        <h3>Minos手搖磨豆機</h3>
+                        <span>TWD3500</span> 
+                        <p>優惠 2700</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div><div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/濾杯.jpg" alt="">
+                    <div class="text">
+                        <h3>手沖咖啡陶瓷濾杯</h3>
+                        <span>TWD1300</span> 
+                        <p>優惠 1160</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div><div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/濾杯2.jpg" alt="">
+                    <div class="text">
+                        <h3>HARIO無限濾杯</h3>
+                        <span>TWD440</span> 
+                        <p>優惠 340</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+
+
+<!-- 第二組商品 -->
+
+<div class="container">
+    <div class="col-3  ">
+        <div class="equipment_item">
+            
+        </div>
+    </div>
+    <div class="col-9 ">
+        <div class="row">
+            <div class="col-3">              
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/濾杯3.jpg" alt="">
+                    <div class="text">
+                        <h3>陶瓷咖啡濾杯</h3>
+                        <span>TWD1200</span> 
+                        <p>優惠 1050</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/手沖濾杯架.jpg" alt="">
+                    <div class="text">
+                        <h3>手沖濾杯架</h3>
+                        <span>TWD2450</span> 
+                        <p> 優惠2100</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>   
+            </div>           
+            <div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/咖啡渣.jpg" alt="">
+                    <div class="text">
+                        <h3>咖啡粉渣桶</h3>
+                        <span>TWD1000</span> 
+                        <p>優惠 900</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div><div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/導引流.jpg" alt="">
+                    <div class="text">
+                        <h3>導流夾</h3>
+                        <span>TWD440</span> 
+                        <p>優惠 390</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 第三組商品 -->
+<div class="container">
+    <div class="col-3  ">
+        <div class="equipment_item"> 
+        </div>
+    </div>
+    <div class="col-9 ">
+        <div class="row">
+            <div class="col-3"> 
+            <div class="equipment_item">
+                <img src="./圖片/新增資料夾/咖啡杯2.jpg" alt="">
+                <div class="text">
+                    <h3>陶瓷馬克杯</h3>
+                    <span>TWD1200</span> 
+                    <p>優惠 1000</p>
+                </div>
+                <div class="btn">
+                <button class="goshop">加入購物車</button>
+                <button class="goshop shop2">直接購買</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"> 
+            <div class="equipment_item">
+                <img src="./圖片/新增資料夾/咖啡杯.jpg" alt="">
+                <div class="text">
+                    <h3>岩泥山型杯馬克杯</h3>
+                    <span>TWD950</span> 
+                    <p> 優惠800</p>
+                </div>
+                <div class="btn">
+                <button class="goshop">加入購物車</button>
+                <button class="goshop shop2">直接購買</button>
+                </div>
+            </div>
+        </div>           
+            <div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/虹吸過濾器.jpg" alt="">
+                    <div class="text">
+                        <h3>虹吸過濾器</h3>
+                        <span>TWD1000</span> 
+                        <p>優惠 900</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div><div class="col-3"> 
+                <div class="equipment_item">
+                    <img src="./圖片/新增資料夾/氣密保鮮罐.jpg" alt="">
+                    <div class="text">
+                        <h3>氣密保鮮罐</h3>
+                        <span>TWD840</span> 
+                        <p>優惠 690</p>
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="pag">
+         <a href=""><span>< </span></a>
+         <a href=""><span>1 </span></a>
+         <a href=""><span>2 </span></a>
+         <a href=""><span>3 </span></a>
+         <a href=""><span>4 </span></a>
+         <a href=""><span>5 </span></a>
+         <a href=""><span>> </span></a>
+      
+    </div> -->
+
+
+
+
+  
+<!-- 頁尾 -->
+
+ 
+<div class="footer">
+    <div class="foot_logo">
+        <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+    </div>
+    <div class="foot_text">
+        <h2>好時光咖啡豆專賣店</h2>
+        <p>地址:台北市太平洋路119號</p><br>
+        <p>Email:Goodtimecoffee@gmail.com</p><br>
+        <p>Phone:080-000-123</p>
+    </div>
+
+    <div class="foot_message">
+        <div class="message_item">
+            <h2>商店訊息</h2>
+            <a href="./05school.html">關於我們</a>
+            <a href="./02brand.html">品牌精神</a>
+        </div>
+        <div class="message_item">
+            <h2>商品服務</h2>
+            <a href="./03coffee bean.html">暢銷咖啡豆</a>
+            <a href="./04equipment.html">咖啡器材</a>
+        </div>
+        <div class="message_item">
+            <h2>咖啡學院</h2>
+            <a href="./05school.html">職人講座</a>
+            <a href="./05school.html">精選文章</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

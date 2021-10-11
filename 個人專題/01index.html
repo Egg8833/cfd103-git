@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./goodtime.css">
+    <title>好時光咖啡豆</title>  
+    <style>
+
+  
+    /* ------輪播圖---- */
+
+    .slider {
+        width: 1200px;
+        margin: auto;
+    }
+    .slider_pic img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+  /* ----品牌精神------- */
+  .faith {
+     width: 1200px;
+     margin: auto;
+
+     display: flex;
+     flex-direction: column;
+     background-color: bisque;
+     
+    
+ }
+ .faith_itme {
+     width: 800px; 
+     display: flex;
+     position: relative;
+     animation: cross 3s ease-in forwards ;
+     
+ }
+ .item2 { 
+    margin-left: auto;
+    position: relative;
+    animation: cross2 3s ease-in forwards ;
+ }
+ .faith_itme .pic {
+     width: 400px;
+ }
+ .faith_itme .pic img {
+     width: 100%;
+     vertical-align: top;
+     border-radius: 20px;
+ }
+ .faith_itme .text {
+     width: 300px;
+     margin-left: 50px;
+     margin-top: 30px;
+     text-align: justify;
+
+ } 
+ .item2 .text {
+     margin-right: 50px;
+    }
+  
+.text p {font-size: 18px;}
+
+ .faith_itme .text h3{
+     margin-top: 20px;
+     margin-bottom: 10px;
+     font-size: 30px;
+ }
+
+    @keyframes cross { from {  left: 0px; opacity:0;  }to { left : 200px ; opacity: 1; } }
+    @keyframes cross2 { from {  left: 0px; opacity:0;  }to { left : -100px ; opacity: 1; } }
+
+    /* --------暢銷咖啡豆------- */
+    .bean_title{
+        width:1200px;
+        margin: auto;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        text-align: center;
+        background-color: #fff7ccd8;
+        position: relative;   
+    }
+    .bean_title h2 {
+        font-size: 40px;
+        position: relative;
+        color: #383316;
+    }
+
+    .bean_container {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #fff7ccd8;}
+
+    .bean_box {
+        width: 275px;
+        margin: 10px;
+        border: solid 1px  silver;
+        border-radius: 10px;
+        position: relative;
+    }
+   
+
+    .bean_pic{
+        position: relative;
+    }
+
+    .bean_pic img {
+        width: 100%;
+        vertical-align: top;
+
+    }
+    .bean_text {
+        border-top: solid 1px silver;
+        text-align: center;
+      
+    }
+    .text1:before{ content: '';
+    border-top: 25px solid rgb(255, 153, 0);    
+    border-right: 25px solid rgb(255, 153, 0);    
+    border-left: 25px solid rgb(255, 153, 0);    
+    border-bottom: 25px solid transparent;  
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    }
+  
+    .bean_sale::after {content:'熱賣';
+    color: rgb(226, 27, 27);
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    z-index: 2;
+    }
+    
+    .bean_text h2 {
+        font-size: 24px;
+        color: #3a3204;
+    }
+    .bean_text span {
+        font-size:30px ;
+        color: red;
+    }
+    .bean_text p {
+        color: blue;
+        text-align: right;
+        font-size: 20px;
+    }
+    .bean_text a {
+        text-decoration: none;
+    }
+    
+    /* ------購物車 */
+    .coffee_shop {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        background-color: #fff7ccd8;
+       
+    }
+    .coffee_shop_item {
+        width: 280px;
+        margin: 10px;
+        margin-top: -8px;
+        justify-content: center;
+        display: flex;
+    }
+    .coffee_shop_item button {
+        padding: 12px;
+        background-color: lemonchiffon; 
+        border-radius: 10px;
+        box-shadow:0px 5px 5px rgb(216, 201, 65);
+    }
+    
+
+
+
+
+
+
+    /* ---------咖啡學院------ */
+
+    :root {
+            --col-gap:5px;
+        }
+      
+    .coffee_container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: bisque;
+        }
+    
+
+        [class*="col-"]{
+            padding-left: var(--col-gap); 
+            padding-right: var(--col-gap);
+            box-sizing: border-box;
+            margin-bottom: calc(var(--col-gap)*2);
+        }
+
+        .col-1{width:8.333333%;  }
+        .col-2{width:16.666666%;  }
+        .col-3{width:25%; }
+        .col-4{width:33.333333%; }
+        .col-5{width:calc(100%/ 12 * 5); }
+        .col-6{width:calc(100%/ 12 * 6); }
+        .col-7{width:calc(100%/ 12 * 7); }
+        .col-8{width:calc(100%/ 12 * 8); }
+        .col-9{width:calc(100%/ 12 * 9); }
+        .col-10{width:calc(100%/ 12 * 10); }
+        .col-11{width:calc(100%/ 12 * 11); }
+        .col-12{width:calc(100%/ 12 * 12); }
+
+        .coffee_item {
+            background-color: yellow;
+        }
+        .coffee_item img :hover {
+            background: violet;
+        }
+
+      
+        .coffee_item img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .coffee_item:hover {
+            opacity: 0.5;
+            background-color: gray;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+
+  
+        <nav>
+            <div class="title_logo">
+            <a href="./01index.html">
+            <img src="./圖片/商標.png" alt="好時光圖片商標"></a>
+            </div>
+
+            <div class="title_list" >
+            <a href="./02brand.html" >關於好時光</a>
+            <a href="./03coffee bean.html">精選咖啡豆</a>
+            <a href="./04equipment.html">咖啡器材</a>
+            <a href="./05school.html">咖啡學院</a>
+            <a href="./06shop.html">聯絡我們</a>
+
+            <!-- -----少兩個可以點集的icon -->
+            </div>
+        </nav>
+
+    
+    <!-- 輪播圖 -->
+
+    <div class="slider">
+        <div class="slider_pic">
+            <img src="./圖片/專業形象Aica.jpg" alt="咖啡豆大師">
+           
+        </div>
+    </div>
+
+
+
+    <!-- -----精神理念  -->
+    <div class="bean_title" style="background-color: bisque;">
+        <h2>品牌精神</h2>
+    </div>
+    <div class="faith">
+      
+        <div class="faith_itme">
+             <div class="pic">
+                <img src="./圖片/品牌精神/1 (3).jpg" alt="">
+            </div>
+            <div class="text">
+                <h3>專業烘焙手法</h3>
+                <p>本店的咖啡師傅擁有國際的烘焙認證及多年烘焙手法，以獨特的直火式烘焙加上科學化的數據，提供不同以往的咖啡風格。</p>
+            </div> 
+        </div>
+
+        <div class="faith_itme item2">
+             <div class="text">
+               <h3>精心挑選</h3>
+               <p >每批採購的生豆有專業杯測師把關，達到我們的品質標準才進行購買，每一粒咖啡豆皆是精挑細選,給顧客最新鮮的咖啡豆。</p>
+           </div> 
+           <div class="pic">
+               <img src="./圖片/品牌精神/1 (2).jpg" alt="">
+           </div>
+          
+       </div>
+       <div class="faith_itme">
+        <div class="pic">
+           <img src="./圖片/品牌精神/1 (1).jpg" alt="">
+       </div>
+       <div class="text">
+           <h3>高品質</h3>
+           <p>每個細節用心嚴格控管，首席烘焙師以高超的技術少量精烘，確保每顆咖啡豆的品質，絕對堅持給顧客最新鮮的咖啡豆。
+           </p>
+       </div> 
+   </div>
+</div>
+
+    <!-- ------暢銷咖啡豆----- -->
+    <div class="bean_title">
+        <h2>暢銷咖啡豆</h2>
+    </div>
+
+    <div class="bean_container">
+        <div class="bean_box"> 
+            <div class="bean_pic">
+                <a href="./03coffee bean.html"><img src="./圖片/咖啡產品4.png" alt=""></a>
+            </div>
+            <div class="bean_sale"></div>
+            <div class="bean_text text1">
+                <a href="./03coffee bean.html"><h2>阿拉比卡咖啡豆</h2></>
+                <span>＄900</span>
+                <p>read more...</p></a>
+            </div>
+        </div>
+        
+        <div class="bean_box">
+            <div class="bean_pic">
+                <a href="./03coffee bean.html"><img src="./圖片/咖啡產品2.png" alt=""></a>
+            </div>
+            <div class="bean_text">
+                <a href="./03coffee bean.html">
+                <h2>衣索比亞 耶加雪菲</h2>
+                <span>＄700</span>
+                <p>read more...</p></a>
+            </div>
+        </div>
+
+        <div class="bean_box">
+            <div class="bean_pic">
+             <a href="./03coffee bean.html"><img src="./圖片/咖啡產品3.png" alt=""></a>
+            </div>
+            <div class="bean_sale"></div>
+            <div class="bean_text text1">
+                <a href="./03coffee bean.html">
+                <h2>哥倫比亞 薇拉咖啡豆</href>
+                </h2>
+                <span>＄900</span>
+                <p>read more...</p></a>
+            </div>
+        </div>  
+        
+        <div class="bean_box">
+            <div class="bean_pic">
+             <a href="./03coffee bean.html"><img src="./圖片/咖啡產品1.png" alt=""></a>
+            </div>
+            <div class="bean_text">
+                <a href="./03coffee bean.html">
+               <h2>瓜地馬拉 安提瓜咖啡豆</h2>
+                <span>＄900</span>
+                <p>read more...</p> </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="coffee_shop">
+        <div class="coffee_shop_item">
+            <button>加入購物車</button>
+        </div>
+        <div class="coffee_shop_item">
+            <button>加入購物車</button>
+        </div>
+        <div class="coffee_shop_item">
+            <button>加入購物車</button>
+        </div>
+        <div class="coffee_shop_item">
+            <button>加入購物車</button>
+        </div>
+      
+    </div>
+
+   <!-- ------咖啡學院------ -->
+
+   <div class="bean_title">
+    <h2>咖啡學院</h2>
+   </div>
+    <div class="coffee_container">
+        <div class="col-3">
+            <div class="coffee_item">
+                <a href="./05school.html"><img src="./圖片/咖啡學院/咖啡小知識-櫻桃採收.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="coffee_item">
+             <a href="./05school.html"><img src="./圖片/咖啡學院/咖啡小知識 300X200.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="coffee_item">
+             <a href="./05school.html"><img src="./圖片/咖啡學院/咖啡小知識 巴西.jpg" alt=""></a>
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="coffee_item">  
+             <a href="./05school.html"><img src="./圖片/咖啡學院/咖啡小知識 曼特寧.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="coffee_container">
+        <div class="col-3">
+            <div class="coffee_item">
+                <a href="./05school.html"><img src="./圖片/咖啡學院/手沖黃金比例.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="coffee_item">
+             <a href="./05school.html"><img src="./圖片/咖啡學院/基礎手沖.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="coffee_item">
+             <a href="./05school.html"><img src="./圖片/咖啡學院/試烘影片.jpg" alt=""></a>
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="coffee_item">  
+             <a href="./05school.html"><img src="./圖片/咖啡學院/影片 轟鬥雞介紹.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- 頁尾 -->
+
+ 
+    <div class="footer">
+        <div class="foot_logo">
+            <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+        </div>
+        <div class="foot_text">
+            <h2>好時光咖啡豆專賣店</h2>
+            <p>地址:台北市太平洋路119號</p>
+            <p>Email:Goodtimecoffee@gmail.com</p>
+            <p>Phone:080-000-123</p>
+        </div>
+
+        <div class="foot_message">
+            <div class="message_item">
+                <h2>商店訊息</h2>
+                <a href="./05school.html">關於我們</a>
+                <a href="./02brand.html">品牌精神</a>
+            </div>
+            <div class="message_item">
+                <h2>商品服務</h2>
+                <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                <a href="./04equipment.html">咖啡器材</a>
+            </div>
+            <div class="message_item">
+                <h2>咖啡學院</h2>
+                <a href="./05school.html">職人講座</a>
+                <a href="./05school.html">精選文章</a>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
