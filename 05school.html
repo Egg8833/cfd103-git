@@ -9,13 +9,18 @@
 
     <style>
 
-
+    body{
+        background-image: url(./pic/body-bg.png);
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: center;
+    }
         
   
     /* ------輪播圖---- */
 
     .slider {
-        width: 1200px;
+        width: 100%;
         margin: auto;
     }
     .slider_pic img {
@@ -25,7 +30,7 @@
 
     /* <!-- 文章類型選項 --> */
     .article_wrap {
-        width: 1200px;
+        max-width: 1200px;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
@@ -144,26 +149,28 @@
 
     /* <!-- 文章列表 --> */
     .article {
-        width: 1200px;
+        max-width: 1200px;
         margin: auto;
         display: flex;
     }
     .big_article {
-        width: 960px; 
+        width: 100%; 
         border: solid 1px rgb(185, 184, 184);
         border-radius: 15px;
+       
     }
     .big_box {
         width: 240px;
     }
     .article_item {
-        width: 960px;
+        max-width: 960px;
         margin: auto;
         display: flex;
+    
        
     }
     .article_item_pic {
-        width:360px ;
+        width:37.5% ;
     }
     .article_item_pic img {
         width: 100%;
@@ -171,7 +178,7 @@
     }
 
     .article_item_text{
-        width:600px;
+        width:62.5%;
         display: flex;
         align-content: center;
         flex-direction: column;
@@ -190,6 +197,7 @@
         flex-grow: 1;
         align-content: center;
         text-align: justify;
+        
     }
     .book_title p {
         line-height: 25px;
@@ -212,24 +220,31 @@
 </head>
 <body>
 
-    
-        <nav>
-            <div class="title_logo">
-                <a href="./01index.html"><img src="./圖片/商標.png" alt="好時光圖片商標"></a>
-            </div>
+     <!-- 導覽列 -->
+     <input type="checkbox" id="menu-control">
 
-            <div class="title_list" >
-            <a href="./02brand.html" >關於好時光</a>
-            <a href="./03coffee bean.html">精選咖啡豆</a>
-            <a href="./04equipment.html">咖啡器材</a>
-            <a href="./05school.html">咖啡學院</a>
-            <a href="./06shop.html">聯絡我們</a>
-
-            <!-- -----少兩個可以點集的icon -->
-            </div>
-
-        </nav>
-   
+     <header class="main-header">
+         <!-- logo -->
+         <h1 class="logo">
+             <a href="./01index.html" class="logo">
+                 <img src="./pic/logo.png">
+             </a>
+         </h1>
+         <!-- 漢堡 -->
+         <label class="hb" for="menu-control">
+             <span></span>
+             <span></span>
+             <span></span>
+         </label>
+         <!-- 選單 -->
+         <nav class="main-nav">
+             <a href="./02brand.html" >關於好時光</a>
+             <a href="./03coffee bean.html">精選咖啡豆</a>
+             <a href="./04equipment.html">咖啡器材</a>
+             <a href="./05school.html"  style="color:#8f360e;">咖啡學院</a>
+           
+            </nav>
+     </header>
 
 <!-- 輪播圖 -->
 
@@ -306,7 +321,6 @@
     <!-- 文章列表 -->
 
     <div class="article">
-       
         <div class="big_article">
         <div class="article_item">
             <div class="article_item_pic">
@@ -437,43 +451,50 @@
   
     
 
+  
 <!-- 頁尾 -->
 
- 
-<div class="footer">
-    <div class="foot_logo">
-        <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
-    </div>
-    <div class="foot_text">
-        <h2>好時光咖啡豆專賣店</h2>
-        <p>地址:台北市太平洋路119號</p>
-        <p>Email:Goodtimecoffee@gmail.com</p>
-        <p>Phone:080-000-123</p>
-    </div>
-
-    <div class="foot_message">
-        <div class="message_item">
-            <h2>商店訊息</h2>
-            <a href="./05school.html">關於我們</a>
-            <a href="./02brand.html">品牌精神</a>
+<div class="main-footer">
+    <div class="container">
+        <div class="footer-item">
+          <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+          <div>
+          <h2>好時光咖啡豆專賣店</h2>
+          <p>訂購專線：0800-123-123</p>
+          <p>商店地址：台北市和平路110號</p></div>
+        </div> 
+        <div class="footer-item">
+            <h4>商店訊息</h4>
+            <nav>
+                <a href="./02school.html">關於我們</a>
+                <a href="./02brand.html">品牌精神</a>
+                <a href="">聯絡我們</a>
+            
+            </nav>
         </div>
-        <div class="message_item">
-            <h2>商品服務</h2>
-            <a href="./03coffee bean.html">暢銷咖啡豆</a>
-            <a href="./04equipment.html">咖啡器材</a>
+        <div class="footer-item">
+            <h4>商品服務</h4>
+            <nav>
+                <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                <a href="./03coffee bean.html">經典咖啡豆</a>
+                <a href="./04equipment.html">熱銷咖啡器材</a>
+            </nav>
+
         </div>
-        <div class="message_item">
-            <h2>咖啡學院</h2>
-            <a href="./05school.html">職人講座</a>
-            <a href="./05school.html">精選文章</a>
+        <div class="footer-item">
+            <h4>咖啡學院</h4>
+            <nav>
+                <a href="./05school.html">咖啡小知識</a>
+                <a href="./05school.html">咖啡沖泡技術</a>
+                <a href="./05school.html">咖啡教學影片</a>
+            </nav>
         </div>
     </div>
-</div>
-
-
-
-
-
+    <div class="copyright">
+        本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。<br>
+        若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理
+    </div>
+</div>    
 
 </body>
 </html>
