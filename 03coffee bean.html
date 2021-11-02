@@ -5,18 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./goodtime.css">
+    <link rel="stylesheet" href="./greid2.css">
     <title>Document</title>
 
     <style>
 
-
+    body{
+        background-image: url(./pic/body-bg.png);
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: center;
+    }
         
   
     /* ------輪播圖---- */
 
     .slider {
-        width: 1200px;
+        width: 100%;
         margin: auto;
+        object-fit: cover;
     }
     .slider_pic img {
         width: 100%;
@@ -24,27 +31,30 @@
     }
 
     /* <!-- 文章類型選項 --> */
+    .article-bg{
+      background-color: bisque;
+    }
+
     .article_wrap {
-        width: 1200px;
-        margin: auto;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
     .article_list {
         width: 1200px;
-        margin: auto;
-        margin:10px 0px;
+        margin:10px auto;
         display: flex;
         flex-direction: column;
         border: solid 1px rgb(185, 184, 184);
+        box-shadow: 5px 5px 5px rgb(238, 196, 145);
         border-radius: 15px;
-        background-color: bisque;
+        background-color: rgb(255, 217, 172);
         
     }
 
     .list_item {
         display: flex;
-        padding: 20px;
+        padding: 18px;
         color: #3a3204;
     }
     
@@ -54,12 +64,11 @@
     .item2 li a {
         padding-left:  30px;
     }
-
    
     .list_item li {
         list-style: none;
         text-decoration: none;
-        margin:0px 20px;
+        /* margin:0px 20px; */
     }
  
     .list_item a {
@@ -69,6 +78,9 @@
         font-size: 20px;
         padding: 0px 15px;
         color:#3a3204 ;
+    }
+    .list_item a:hover{
+        color: #8f360e;
     }
     .list_item span {
         font-size: 20px;
@@ -83,107 +95,93 @@
     }
 
      /* 咖啡器材清單 */
-        
-     :root {
-            --col-gap:15px;
-        }
-
-        .container {
-            width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            background-color:#fff7ccd8;
-           
-        }
-        .row {
-            display: flex;
-            margin-left: -15px; ;
-            margin-right: -15px;
-        }
-        [class*="col-"]{
-            padding-left: var(--col-gap); 
-            padding-right: var(--col-gap);
-            box-sizing: border-box;
-        }
-        .col-1{width:calc(100%/ 12 * 1);  }
-        .col-2{width:calc(100%/ 12 * 2);  }
-        .col-3{width:calc(100%/ 12 * 3); }
-        .col-4{width:calc(100%/ 12 * 4); }
-        .col-5{width:calc(100%/ 12 * 5); }
-        .col-6{width:calc(100%/ 12 * 6); }
-        .col-7{width:calc(100%/ 12 * 7); }
-        .col-8{width:calc(100%/ 12 * 8); }
-        .col-9{width:calc(100%/ 12 * 9); }
-        .col-10{width:calc(100%/ 12 * 10); }
-        .col-11{width:calc(100%/ 12 * 11); }
-        .col-12{width:calc(100%/ 12 * 12); } 
-
-      .equipment_item {
-            padding: 10px; 
+         
+    .bean_item {
             position: relative;
-    
-        }
-        .equipment_item_title{    
-            position: absolute;
-            height: 500px;
-            right:0px;
-            left: 0px; 
-            border: indianred 1px solid;
-        }
-        .equipment_item_title h2{
-            text-align: center;
-            color: #3a3204;
-        }
-        .equipment_item_title li,a {
-            text-decoration: none;
-            list-style: none;
-        }
-        .equipment_item_title li{
-            padding: 10px 0px 10px 65px;
-        }
-        .equipment_item_title a {
-            font-size: 20px;
-            color:#3a3204;
-            padding: 0px 5px;
-        }
-        .equipment_item_title a:hover{
-            background-color: indianred;
-        }
-        .equipment_item img {width: 100%;}
-        .equipment_item h3 {
-            text-align: center;
-            font-size: 25px;
-            color:#3a3204 ;
-        }
-        
-        .equipment_item .text span,p {
-            display: inline-block;
-            padding: 10px 0px;
-        }
-        .equipment_item .text span {
-            line-height: 22px;
-            
-            text-decoration:line-through;
-            color: gray;
-        }
-        .equipment_item .text p {
-            padding-left:90px;
-      }
-            
-        .btn {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            background-color: #dbcec8;
+            border: rosybrown 1px solid;
+        }
+    .bean_item:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+    .bean_item:hover img {
+        background-color: rgb(167, 154, 154);}
+    .bean_item img {
+            background-color: white;
+            vertical-align: top;
+            width: 100%;
+        }
+    .bean_item a{
+        text-decoration: none;
+    }
+    .bean_item .txt {
+            background-color: #dbcec8;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+    .bean_item h2 {
+            font-size: 30px;
+            padding: 5px 0px;
+            color:#8f360e;
+            text-align: center;
+            }
+            
+    .bean_item .txt span {
+            font-size: 25px;
+            padding-bottom: 5px;
+            color: rgb(255,0,0,.8);
+        }
+    .bean_item .txt span:nth-child(1){
+        text-decoration:line-through;
+        color: black;
+    }
+    .btn {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    .btn > button {
+            padding: 10px;
+            line-height: 15px;
+            cursor: pointer;
         }
        
-        .goshop {
-            height: 30px;  
-        }
-        .shop2 {
-            width:90px;
-        }
-        
+    .goshop {
+            font-size: 18px;
+            height: 40px;
+            padding: 0px 10px;
+            margin-bottom: 10px;  
+            width:120px;
 
+        }
+ 
+  
+        
+    @media screen and (max-width:768px) {   .bean_item h2 {
+            font-size: 25px;}
+        .item2 li a {
+        padding-left:  10px;
+    }   
+        .list_item a {
+            padding: 0px 5px;
+        }
+       
+            }
+
+    @media screen and (max-width:500px) {
+        .goshop {
+            font-size: 10px;} 
+        .bean_item h2 {
+            font-size: 20px;}
+        .bean_item .txt span {
+            font-size: 18px;
+        }
+    }
+ 
+ 
 
 
 
@@ -191,36 +189,43 @@
 </head>
 <body>
 
-    <section class="title">
-        <nav>
-            <div class="title_logo">
-                <a href="./01index.html"><img src="./圖片/商標.png" alt="好時光圖片商標"></a>
-            </div>
+     <!-- 導覽列 -->
+     <input type="checkbox" id="menu-control">
 
-            <div class="title_list" >
-            <a href="./02brand.html" >關於好時光</a>
-            <a href="./03coffee bean.html">精選咖啡豆</a>
-            <a href="./04equipment.html">咖啡器材</a>
-            <a href="./05school.html">咖啡學院</a>
-            <a href="./06shop.html">聯絡我們</a>
-
-            <!-- -----少兩個可以點集的icon -->
-            </div>
-
-        </nav>
-    </section>
+     <header class="main-header">
+         <!-- logo -->
+         <h1 class="logo">
+             <a href="./01index.html" class="logo">
+                 <img src="./pic/logo.png">
+             </a>
+         </h1>
+         <!-- 漢堡 -->
+         <label class="hb" for="menu-control">
+             <span></span>
+             <span></span>
+             <span></span>
+         </label>
+         <!-- 選單 -->
+         <nav class="main-nav">
+             <a href="./02brand.html" >關於好時光</a>
+             <a href="./03coffee bean.html" style="color:#8f360e;">精選咖啡豆</a>
+             <a href="./04equipment.html">咖啡器材</a>
+             <a href="./05school.html">咖啡學院</a>
+      
+            </nav>
+     </header>
 
 <!-- 輪播圖 -->
 
 <div class="slider">
     <div class="slider_pic">
-        <img src="./圖片/專業形象介紹1200X300.jpg">
+        <img src="./pic/banner/coffee_bean.jpg">
        
     </div>
 </div>
   
 
-
+<section class="article-bg">
 <div class="article_wrap">
     <div class="article_list">
         <div class="list_item item2 "> 
@@ -242,245 +247,231 @@
         </div>
     </div>
 </div>
+</section>
 
-
-<div class="container">
-    <div class="col-12 ">
+<!-- <section class="item-bg"> -->
+    <div class="container">
         <div class="row">
-            <div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品1.png" alt="">
-                    <div class="text">
-                        <h3>瓜地馬拉安提瓜咖啡豆</h3>
-                    <div class="text_sale">
-                     <span>TWD1000</span> 
-                        <p>優惠 900</p>   
-                    </div>
-                        
-                    </div>
-                    <div class="btn">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item ">
+                <a href="./07-1-arabica.html"><img src="./pic/dry_bean/dry_bean (1).png" alt="">
+                <h2>阿拉比卡咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>    
+                </div> 
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
+                </div>             
+            </div></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item">
+                <a href="./07-2-yiga.html"><img src="./pic/dry_bean/dry_bean (3).png" alt=""> 
+                <h2>耶加雪夫咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>  
                 </div>
-            </div>
-            <div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品2.png" alt="">
-                    <div class="text">
-                        <h3>衣索比亞 耶加雪菲</h3>
-                        <span>TWD800</span> 
-                        <p>優惠 700</p>
-                    </div>
-                    <div class="btn">
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
-            </div><div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品3.png" alt="">
-                    <div class="text">
-                        <h3>哥倫比亞 薇拉咖啡豆</h3>
-                        <span>TWD1000</span> 
-                        <p>優惠 900</p>
-                    </div>
-                    <div class="btn">
-                    <button class="goshop">加入購物車</button>
-                    <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
-            </div><div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品4.png" alt="">
-                    <div class="text">
-                        <h3>阿拉比卡 咖啡豆</h3>
-                        <span>TWD1000</span> 
-                        <p>優惠 900</p>
-                    </div>
-                    <div class="btn">
-                    <button class="goshop">加入購物車</button>
-                    <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
+                </div> </a>    
             </div>
         </div>
-    </div>
-</div>
-
-            
-
-
-<!-- 第二組商品 -->
-
-
-<div class="container">
-    <div class="col-12 ">
-        <div class="row">
-            <div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品1.png" alt="">
-                    <div class="text">
-                        <h3>瓜地馬拉安提瓜咖啡豆</h3>
-                    <div class="text_sale">
-                     <span>TWD1000</span> 
-                        <p>優惠 900</p>   
-                    </div>
-                        
-                    </div>
-                    <div class="btn">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item bean_item1">
+                <a href="./07-3-mannin.html"><img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                <h2>曼特寧咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT700</span>  
+                </div>
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
+                </div>            
+            </div></a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item">
+                <a href="./07-5-grand.html"><img src="./pic/dry_bean/dry  (2).jpg" alt=""> 
+                <h2>佳景莊園咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT500</span>    
                 </div>
-            </div>
-            <div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品2.png" alt="">
-                    <div class="text">
-                        <h3>衣索比亞 耶加雪菲</h3>
-                        <span>TWD800</span> 
-                        <p>優惠 700</p>
-                    </div>
-                    <div class="btn">
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
-            </div><div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品3.png" alt="">
-                    <div class="text">
-                        <h3>哥倫比亞 薇拉咖啡豆</h3>
-                        <span>TWD1000</span> 
-                        <p>優惠 900</p>
-                    </div>
-                    <div class="btn">
+                </div>              
+            </div></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item ">
+                <a href="./07-4-ali.html"><img src="./pic/dry_bean/dry_bean (4).png" alt="">
+                <h2>阿里山咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>    
+                </div> 
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
+                </div>             
+            </div></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item">
+                <a href="./07-1-arabica.html"><img src="./pic/dry_bean/dry_bean (1).png" alt=""> 
+                <h2>阿拉比卡咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>  
                 </div>
-            </div><div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品4.png" alt="">
-                    <div class="text">
-                        <h3>阿拉比卡咖啡豆</h3>
-                        <span>TWD1000</span> 
-                        <p>優惠 900</p>
-                    </div>
-                    <div class="btn">
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
+                </div> </a>
             </div>
         </div>
-    </div>
-</div>
-
-
-<!-- 第三組商品 -->
-
-
-
-<div class="container">
-    <div class="col-12 ">
-        <div class="row">
-            <div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品1.png" alt="">
-                    <div class="text">
-                        <h3>瓜地馬拉安提瓜咖啡豆</h3>
-                    <div class="text_sale">
-                     <span>TWD1000</span> 
-                        <p>優惠 900</p>   
-                    </div>
-                        
-                    </div>
-                    <div class="btn">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item bean_item1">
+                <a href="./07-2-yiga.html"><img src="./pic/dry_bean/dry_bean (3).png" alt="">
+                <h2>耶黑雪夫咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>  
+                </div>
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
+                </div>            
+            </div></a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item">
+                <a href="./07-4-ali.html"><img src="./pic/dry_bean/dry_bean (4).png" alt=""> 
+                <h2>阿里山咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>    
                 </div>
-            </div>
-            <div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品2.png" alt="">
-                    <div class="text">
-                        <h3>衣索比亞 耶加雪菲</h3>
-                        <span>TWD800</span> 
-                        <p>優惠 700</p>
-                    </div>
-                    <div class="btn">
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
-            </div><div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品3.png" alt="">
-                    <div class="text">
-                        <h3>哥倫比亞 薇拉咖啡豆</h3>
-                        <span>TWD1000</span> 
-                        <p>優惠 900</p>
-                    </div>
-                    <div class="btn">
+                </div>              
+            </div></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item ">
+                 <a href="./07-5-grand.html"><img src="./pic/dry_bean/dry  (2).jpg" alt="">
+                <h2>佳景莊園咖啡豆</h2>
+                <div class="txt">
+                    <span>NT800</span>
+                    <span>NT500</span>    
+                </div> 
+                <div class="btn">
                     <button class="goshop">加入購物車</button>
                     <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
-            </div><div class="col-3"> 
-                <div class="equipment_item">
-                    <img src="./圖片/咖啡豆/咖啡產品4.png" alt="">
-                    <div class="text">
-                        <h3>阿拉比卡咖啡豆</h3>
-                        <span>TWD1000</span> 
-                        <p>優惠 900</p>
-                    </div>
-                    <div class="btn">
-                    <button class="goshop">加入購物車</button>
-                    <button class="goshop shop2">直接購買</button>
-                    </div>
-                </div>
+                </div></a>
             </div>
         </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item">
+                 <a href="./07-3-mannin.html"><img src="./pic/dry_bean/dry  (1).jpg" alt=""> 
+                <h2>曼特寧咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT700</span>  
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div></a>
+                        
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item bean_item1">
+                 <a href="./07-2-yiga.html"><img src="./pic/dry_bean/dry_bean (3).png" alt="">
+                <h2>耶黑雪夫咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>  
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div>   </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="bean_item">
+                 <a href="./07-4-ali.html"><img src="./pic/dry_bean/dry_bean (4).png" alt=""> 
+                <h2>阿里山咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>    
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div>     </a>
+            </div>
+        </div>
+      </div>
     </div>
-</div>
-
-
-
+ 
+   
+  
 <!-- 頁尾 -->
 
- 
-<div class="footer">
-    <div class="foot_logo">
-        <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
-    </div>
-    <div class="foot_text">
-        <h2>好時光咖啡豆專賣店</h2>
-        <p>地址:台北市太平洋路119號</p><br>
-        <p>Email:Goodtimecoffee@gmail.com</p><br>
-        <p>Phone:080-000-123</p>
-    </div>
+<div class="main-footer">
+    <div class="container">
+        <div class="footer-item">
+          <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+          <div>
+          <h2>好時光咖啡豆專賣店</h2>
+          <p>訂購專線：0800-123-123</p>
+          <p>商店地址：台北市和平路110號</p></div>
+        </div> 
+        <div class="footer-item">
+            <h4>商店訊息</h4>
+            <nav>
+                <a href="./02school.html">關於我們</a>
+                <a href="./02brand.html">品牌精神</a>
+                <a href="">聯絡我們</a>
+            
+            </nav>
+        </div>
+        <div class="footer-item">
+            <h4>商品服務</h4>
+            <nav>
+                <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                <a href="./03coffee bean.html">經典咖啡豆</a>
+                <a href="./04equipment.html">熱銷咖啡器材</a>
+            </nav>
 
-    <div class="foot_message">
-        <div class="message_item">
-            <h2>商店訊息</h2>
-            <a href="./05school.html">關於我們</a>
-            <a href="./02brand.html">品牌精神</a>
         </div>
-        <div class="message_item">
-            <h2>商品服務</h2>
-            <a href="./03coffee bean.html">暢銷咖啡豆</a>
-            <a href="./04equipment.html">咖啡器材</a>
-        </div>
-        <div class="message_item">
-            <h2>咖啡學院</h2>
-            <a href="./05school.html">職人講座</a>
-            <a href="./05school.html">精選文章</a>
+        <div class="footer-item">
+            <h4>咖啡學院</h4>
+            <nav>
+                <a href="./05school.html">咖啡小知識</a>
+                <a href="./05school.html">咖啡沖泡技術</a>
+                <a href="./05school.html">咖啡教學影片</a>
+            </nav>
         </div>
     </div>
-</div>
+    <div class="copyright">
+        本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。<br>
+        若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理
+    </div>
+</div>    
 
 </body>
 </html>
