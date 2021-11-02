@@ -180,7 +180,7 @@
         }
         .intr_container .item .txt {
             position: absolute;
-            top: 50px;
+            top: 20px;
             right: -115px;
         } 
         .intr_container .item .txt h2 {
@@ -190,15 +190,17 @@
             color:rgb(88, 37, 37);
         } 
         .intr_container .item .txt p {
-            padding: 5px 0px;
+            display: block;
             font-family: 'Noto Sans TC', sans-serif;
         } 
         .intr_container .item .txt1{      
             right:-130px }
         .intr_container .item .txt2{
- 
-            top:50px;
+            top:30px;
             left:-150px;}
+        .intr_container .item .txt3{
+            right: -135px
+        }
         .intr_container .item .txt h2::after{
             content: '';
 			position: absolute;
@@ -211,18 +213,18 @@
         }
         .intr_container .item .txt2 h2::after{
             content: '';
-            left:100px}
+            left:120px}
         .intr_container .item span {
             position: absolute;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 25px;
+            font-size: 22px;
             left:-150px;
             top: 70px;   
             opacity: 0; 
             padding:3px 10px ;
         }
         .intr_container .item .mid-f {
-            width: 150px;
+            width: 160px;
             left:410px;
             top: 70px;
             }
@@ -267,10 +269,12 @@
             .intr_container .item span {
             font-size: 20px;}
             .intr_container .item .mid-f {
-            left:300px;}
+            left:250px;
+            top: 50px;
+        }
         @keyframes img1 {
             0%{top:-20px;}
-            100%{top:10px;}
+            100%{top:0px;}
             }
         @keyframes img2 {
             0%{top:0px;}
@@ -278,9 +282,11 @@
             }
         @keyframes img3 {
             0%{top:0px;left:0px}
-            100%{top:-55px;left:-5px;}
+            100%{top:-47px;left:-5px;}
             }    }
         
+
+
         @media screen and (max-width:768px) {
             .intr_container {
                 width: 100%;
@@ -634,7 +640,6 @@
         <span>花果香咖啡</span>
         <div class="txt txt1">
             <h2>淺焙烘焙</h2>
-            <p>－水果炸彈香氣</p>
             <p>－花果香氣譜</p>
         </div>
         <img src="./coffee-bean_03.png" alt="" width="">
@@ -644,7 +649,7 @@
         <div class="txt txt2">
             <h2 >中度烘焙</h2>
             <p>－均勻表現香氣</p>
-            <p>－平衡酸值與醇厚度</p>
+          
         </div>
         <img src="./coffee-bean_06.png" alt="">
     </div>
@@ -653,7 +658,6 @@
         <div class="txt txt3">
             <h2>深度烘焙</h2>
             <p>－口感紮實</p>
-            <p>－醇厚度高</p>
         </div>
         <img src="./coffee-bean_08.png" alt="">
     </div>
