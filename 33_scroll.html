@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/jquery-3.6.0.js"></script>
+    <style>
+        textarea{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+	<script>
+		$(function () {	
+            $('textarea').scroll(function(){
+            // 1
+                // $('#feedback').text(`You have scrolled.`);
+            // 2
+                // let scroll_top = $(this).scrollTop();
+                // $('#feedback').text(`You have scrolled, and are at position ${scroll_top} px.`);
+
+            // 3 加上 CSS 之後
+                let scroll_top = $(this).scrollTop();
+                $('#feedback').text(`You have scrolled, and are at position ${scroll_top} px.`);
+            });
+
+            // [補充] 
+            // 1. jQuery 的維度屬性
+            // innerHeight(): 包含 padding 不包含 border, margin
+            // innerWidth(): 包含 padding 不包含 border, margin
+            // outerHeight(): 包含 padding, border
+            // outerWidth(): 包含 padding, border
+            // outerHeight(true): 包含 padding, border, margin
+            // outerWidth(true): 包含 padding, border, margin
+
+            // 2. jQuery 的定位屬性
+            // offset() 會回傳JavaScript的 left 值 和 top 值 // {top: 8, left: 8} 
+            // position() 
+
+            // 3. 捲軸控制
+            // scrollTop()
+            // scrollLeft()
+		});	
+	</script>
+</head>
+<body>
+    <!-- <p>
+        <iframe src="./27_slider.html" frameborder="0"></iframe>
+    </p> -->
+    <textarea cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id delectus soluta molestiae? Delectus eveniet iusto, aspernatur, assumenda dignissimos cupiditate laboriosam velit debitis magnam consequatur deserunt ipsam neque consequuntur dolorem! Animi harum odio accusantium! Quasi rem saepe eos repudiandae veritatis corrupti perferendis! Iure, vero quisquam? Facilis amet reprehenderit laboriosam quisquam fugit quas debitis nobis voluptatem beatae nisi delectus esse libero a doloremque doloribus, nam suscipit, officiis eos ipsum deserunt quasi earum est! Eveniet sequi blanditiis illo ducimus necessitatibus, sunt cum doloremque? Officiis aliquam dolore suscipit sed adipisci perspiciatis ratione impedit praesentium hic voluptas aliquid iure reiciendis enim, debitis nostrum nam?</textarea>
+
+    <div id="feedback"></div>
+</body>
+
+</html>

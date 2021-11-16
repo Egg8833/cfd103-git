@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/jquery-3.6.0.js"></script>
+    <style>
+        textarea{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+	<script>
+		$(function () {	
+            $('#agree').attr('disabled',true);
+
+            $('textarea').scroll(function(){
+                let textarea_Height = $(this)[0].scrollHeight;
+                let scroll_Height = textarea_Height - $(this).innerHeight();
+
+                let scroll_Top = $(this).scrollTop();
+
+                if(scroll_Top == scroll_Height){
+                    $('#agree').attr('disabled',false);
+                }
+
+                // $('#feedback').text(`You have scrolled, and are at position ${scroll_top} px.`);
+            });
+
+            // [補充]: 在執行 jQuery 時，可使直接轉換成 DOM物件 的屬性或方法 
+            // $(this)[0].JavaScript的屬性或方法
+            // $(this).get(0).JavaScript的屬性或方法 
+		});	
+	</script>
+</head>
+<body>
+    <!-- lorem300 -->
+    <textarea cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempore dicta aperiam rem aliquam? Doloribus nisi cum praesentium, facere ut velit neque iusto iure expedita eius maxime quos vel animi ea quam molestias reiciendis itaque delectus voluptates? Culpa hic voluptate sapiente, dolorum, similique libero excepturi quas sit temporibus neque inventore ut commodi reiciendis harum quos vero quod odit quibusdam ab. Quibusdam, fugiat iure ipsa pariatur harum sunt, sint repellendus quo reprehenderit voluptatem consequatur architecto commodi dolorum soluta similique provident blanditiis. Mollitia nihil deserunt consequatur nobis unde nostrum recusandae dolorum tenetur ea iure, similique odio? Hic assumenda ullam deleniti quo officiis iure voluptatibus? Possimus similique nihil beatae culpa maxime numquam aperiam, fuga in temporibus nam totam? Sapiente perspiciatis voluptate quisquam porro ducimus iste voluptates quod accusantium earum voluptas eveniet autem omnis voluptatem consectetur ex nostrum, velit sunt, sit tenetur excepturi quidem aliquam asperiores itaque? Est iusto, voluptas perspiciatis quam commodi sed. Deserunt laboriosam, at assumenda earum, doloribus ducimus delectus consequatur vel excepturi enim libero ab odio minima incidunt quos beatae sit quod nesciunt quidem recusandae eum ex reiciendis voluptatibus odit! Voluptatum accusamus aliquam ullam, ad magnam, ex sapiente, voluptatem id rem repellat doloremque sunt non corrupti in! Necessitatibus, quibusdam consectetur explicabo placeat id reiciendis quisquam, provident repudiandae repellat, earum quia recusandae vel odit deleniti amet libero doloribus. Quod velit modi, eaque fugit aperiam voluptatibus non officiis id unde excepturi vitae, nulla facilis architecto animi doloribus. Omnis sapiente necessitatibus quisquam perspiciatis! Rerum veniam tempora nulla, perferendis placeat facere explicabo voluptatum soluta officiis nobis officia iusto debitis animi. Commodi fugit dolor laborum perspiciatis. Fugiat veritatis nam consequuntur quasi saepe porro qui praesentium totam veniam atque autem quia, optio accusantium cum, ex error asperiores eos voluptatum repellat impedit enim? Itaque quae officia, ea, minima harum porro qui at placeat repellat sapiente, saepe repellendus dolorem!</textarea>
+    <p>
+        <input type="checkbox" id="agree"> I agree to the terms and conitions.
+    </p>
+    <div id="feedback"></div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/jquery-3.6.0.js"></script>
+    <style>
+        body{
+            background: url(../images/bg100.png);
+        }
+        #feedback{
+            height: 1500px;
+        }
+        p{
+            width: 100%;
+            position: fixed;
+            top: 200px;
+            text-align: center;
+            font: 25px Calibri;
+        }
+        .scrollBottom{
+            color: maroon;
+            font-weight: bold;
+        }
+    </style>
+	<script>
+		$(function () {	
+            $(window).scroll(function(){
+                let scroll_top = $(window).scrollTop();
+                $('#feedback span').text(scroll_top);
+
+                let gotoButtom = $(document).height() - $(window).innerHeight();
+
+                if(scroll_top == gotoButtom){
+                    $('p').addClass('scrollBottom');
+                }else{
+                    $('p').removeClass('scrollBottom');
+                }
+            });
+		});	
+	</script>
+</head>
+<body>
+    <div id="feedback">
+        <p>scroll top: <span>0</span></p>
+    </div>
+</body>
+
+</html>
