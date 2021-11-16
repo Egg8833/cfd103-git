@@ -63,31 +63,6 @@
      @keyframes cross2 { from {  right: 0px; opacity:0;  }to { right : 100px ; opacity: 1; } }
      @keyframes cross3 { from {  right: 0px; opacity:0;  }to { right : 20px ; opacity: 1; } }
 
-@media screen and (max-width:1024px){
-    .faith_item {
-     width: 300px;}
-    
-}
-
- @media screen and (max-width:768px){
-    .faith_item {
-     width: 200px;
-     margin-left: 20px;
-     padding-right: 10px;
-     padding-bottom: 5px;}
-    .item1,.item2,.item3 {
-    animation: none;}
-    
-    .faith_item p{
-        font-size: 12px;
-        margin-left: 20px;
-    }
-
-    .faith_item h3{
-     margin-left: 20px;
-     padding-top: 5px;
-     margin-bottom: 10px;
-     font-size: 15px;}}
  
 
 
@@ -132,6 +107,9 @@
         padding: 1.6666667%;
         position: relative;
     }
+    .item:last-child{
+        display: none;
+     }
     
 
     .item:hover {
@@ -154,6 +132,44 @@
     }
     .item:hover span{
         color:#fff;
+    }
+
+
+    
+@media screen and (max-width:1024px){
+    .faith_item {
+     width: 300px;}
+     .item:last-child{
+        visibility: hidden;
+        display: unset;
+     }
+    
+}
+
+ @media screen and (max-width:768px){
+    .faith_item {
+     width: 200px;
+     margin-left: 20px;
+     padding-right: 10px;
+     padding-bottom: 5px;}
+    .item1,.item2,.item3 {
+    animation: none;}
+    
+    .faith_item p{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .faith_item h3{
+     margin-left: 20px;
+     padding-top: 5px;
+     margin-bottom: 10px;
+     font-size: 15px;}
+
+     .item:last-child{
+        visibility: hidden;
+        display: unset;
+     }
     }
 
       
@@ -253,7 +269,23 @@
         <span>從小就熱愛喝咖啡，從而專研咖啡，到美國、歐洲各國學習烘焙技術與咖啡知識，也是本店出色的烘焙師傅，擁有完美主義，堅持烘焙出最好的咖啡豆而不斷努力，也讓本店的咖啡豆品質向來保持穩定。<span>
         </div>
     </div>
-</div> 
+    <div class="item" >
+        <img src="./圖片/coffee marster2.jpg">
+        <div class="txt">
+        <h2>王貞治</h2>
+        <h3>專業認證與獲獎 </h3>
+        <span>美國精品咖啡協會國際咖啡品質鑑定師</span> <br>
+        <span>歐洲精品咖啡協會 生豆三級認證</span><br>
+        <span>在2018年杯測師大賽香港區八强</span><br>
+        <span>國際咖啡調配師及課程內部評審員</span>
+        
+        <h2></h2>
+        <span>從小就熱愛喝咖啡，從而專研咖啡，到美國、歐洲各國學習烘焙技術與咖啡知識，也是本店出色的烘焙師傅，擁有完美主義，堅持烘焙出最好的咖啡豆而不斷努力，也讓本店的咖啡豆品質向來保持穩定。<span>
+        </div>
+    </div>
+
+</div>
+
 </div>
 
 <!-- 頁尾 -->
